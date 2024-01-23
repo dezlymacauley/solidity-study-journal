@@ -23,6 +23,9 @@ After installing paru, you can use it to install the solidity Compiler:
 
 `paru -S solidity-language-server`
 
+To confirm that you now have the compiler, run the following command.
+`solc --version`
+
 ---
 
 https://docs.soliditylang.org/en/v0.8.23/installing-solidity.html
