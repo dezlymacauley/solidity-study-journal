@@ -68,6 +68,17 @@ run the following command `forge init --force`
 - Add your solidity file `NameOfContract.sol` in the src folder
 - Then you need run the command `forge compile` or `forge build` 
 
+This will create two new folders **cache** and **out**
+
+NOTE: When using the file tree in Neovim known as nvim-tree.lua,
+these folders will be hidden because the nvim-tree.lua hides any folders,
+that are in the .gitnore file that was created by Foundry.
+
+To Toggle this filter, go to the file tree and press `I`
+For more mappings check out:
+https://github.com/nvim-tree/nvim-tree.lua/blob/master/doc/nvim-tree-lua.txt
+ 2.2 QUICKSTART: HELP
+
 ---
 
 Transaction Fee = Gas Price * Gas Used
