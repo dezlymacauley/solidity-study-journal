@@ -32,7 +32,7 @@ It will end with .t.sol
 To run a test on all test functions in the .t.sol test file:
 `forge test`
 
-To run a test on a specific function in a file:
+To run a test on a specific function in a .t.sol test file:
 E.g.
 
     function testFuzz_SetNumber(uint256 x) public {
@@ -53,5 +53,14 @@ Stateful Fuzzing = In Foundry they are known as invariant tests
 What is Fuzz Testing?
 This si when you supply random data to your system in an attempt to break it.
 
+
+---
+
+What is an invariant?
+This is a property of our system that should always hold.
+E.g. a variable that should always return a specific amount
+E.g. A condition that should never be allowed,
+like "The withdraw amount in a contract, can't be greater than the deposit"
+Or only 10 board members are allowed to vote
 
 ---
