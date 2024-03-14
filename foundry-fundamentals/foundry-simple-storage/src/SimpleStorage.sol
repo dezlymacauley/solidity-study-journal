@@ -1,0 +1,65 @@
+// SPDX-License-Identifier: MIT
+// It is best practice for all Solidity contracts to start with the License
+
+/*
+
+Anyone who uses, modifies, or distributes the code,
+must comply with the conditions outlined in the MIT License,
+such as retaining the original copyright notice and disclaimer.
+
+*/
+
+// This line of code tells solidity to use version 0.8.19 of the compiler
+pragma solidity 0.8.19;
+
+// The name of the contract is called SimpleStorage
+// Everything inside the curly braces is the contract
+contract SimpleStorage {
+
+    // the variable is called myFavoriteNumber,
+    // and the variable type is a uint256
+    // uint256 means unsigned integer 
+    // That means that it is a whole number that can only be positive
+    // 256 means 256 bits. 
+    // That is the size of the number that the integer can hold 
+    uint256 myFavoriteNumber;
+
+    // "Person" is a struct
+    // Think of this as creating a custom variable type
+    // Every variable that is created from the struct variable type,
+    // must follow this template
+    struct Person {
+        uint256 favoriteNumber;
+        string name;
+    }
+
+    // listofPeople is an array that contains a list of variables.
+    // The variable type of each of those variables is "Person"
+    // public means that this variable is publically accessible
+    Person[] public listOfPeople;
+    
+    // This is a mapping called nameToFavoriteNumber,
+    // This mapping takes in a string, and returns the matching number
+    // E.g. You enter the name of a person,
+    // and it will find that person's name and return their myFavoriteNumber
+    // public means that this variable is publically accessible
+    mapping(string => uint256) public nameToFavoriteNumber;
+
+//-----------------------------------------------------------------------------
+
+    function store(uint256 _favoriteNumber) public {
+        myFavoriteNumber = _favoriteNumber;
+    }
+
+    function retrieve() public view returns (uint256) {
+        return myFavoriteNumber;
+    }
+
+    function addPerson(string memory _name, uint256 _favoriteNumber) public {
+        listOfPeople.push(Person(_favoriteNumber, _name));
+        nameToFavoriteNumber[_name] = _favoriteNumber;
+    }
+
+//-----------------------------------------------------------------------------
+
+}
