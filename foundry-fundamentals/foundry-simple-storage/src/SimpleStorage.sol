@@ -56,7 +56,13 @@ contract SimpleStorage {
     }
 
     function addPerson(string memory _name, uint256 _favoriteNumber) public {
+
+        // This will add a new person and their favourite number to the array
         listOfPeople.push(Person(_favoriteNumber, _name));
+
+        // This will create a mapping of the persons's name,
+        // and their favourite number
+        // gas efficient to retrieve this person's name later
         nameToFavoriteNumber[_name] = _favoriteNumber;
     }
 

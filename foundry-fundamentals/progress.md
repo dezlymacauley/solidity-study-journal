@@ -9,3 +9,6 @@
 - Lesson 5: Foundry setup
 - Lesson 6: Setup your VSCode 
 - Lesson 7: Create a new Foundry project 
+- Lesson 8: VSCode Solidity setup
+- Lesson 9: Compile a smart contract using Foundry
+- Lesson 10: Lesson 10: Deploy a smart contract locally using Ganache
