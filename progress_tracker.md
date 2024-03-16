@@ -23,6 +23,19 @@ Remember: "6 figure salary. Luxury and Solitude"
 
 ## Course 2 - Solidity Fundamentals
 
+### Section 1: Simple Storage
+- Lesson 1: Introduction
+- Lesson 2: Setting up your first contract
+- Lesson 3: Basic variable types
+- Lesson 4: Functions
+- Lesson 5: Arrays and structs
+- Lesson 6: Errors and warnings
+
+### Section 4: AI Prompting
+- Lesson 1: AI and forums
+- Lesson 2: Setting up Github
+- Lesson 3: Formatting a question
+- Lesson 4: Speedrun
 
 ---
 
