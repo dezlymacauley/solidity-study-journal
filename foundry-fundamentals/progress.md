@@ -15,3 +15,7 @@
 - Lesson 11: How to add a new network to Metamask
 - Lesson 12: Deploy a smart contract locally using Forge
 - Lesson 13: Important: private key safety pt.1
+- Lesson 14: Deploy a smart contract locally using Anvil
+- Lesson 15: What is a transaction
+- Lesson 16: Important: private key safety pt.2
+- Lesson 17: Never Use A Env File
