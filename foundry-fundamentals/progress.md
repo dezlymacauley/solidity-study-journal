@@ -15,4 +15,3 @@
 - Lesson 11: How to add a new network to Metamask
 - Lesson 12: Deploy a smart contract locally using Forge
 - Lesson 13: Important: private key safety pt.1
-- 

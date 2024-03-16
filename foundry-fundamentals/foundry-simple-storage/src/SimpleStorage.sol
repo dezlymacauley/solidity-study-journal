@@ -10,7 +10,7 @@ such as retaining the original copyright notice and disclaimer.
 */
 
 // This line of code tells solidity to use version 0.8.19 of the compiler
-pragma solidity 0.8.19;
+pragma solidity ^0.8.18;
 
 // The name of the contract is called SimpleStorage
 // Everything inside the curly braces is the contract
