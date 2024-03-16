@@ -577,7 +577,6 @@ WARNING: Just make sure to add the ".password" file to your .gitignore first!
 You obviously don't want your password being pushed to GitHub
 
 ---
-NOTE: DON'T WORRY ABOUT THIS FOR NOW
 
 If you were deploying to a blockchain like Sepolia then you would have to modify the "--broadcast at the end"
 ```
@@ -585,3 +584,123 @@ forge script script/DeploySimpleStorage.s.sol --rpc-url http://127.0.0.1:8545 --
 ```
 
 ---
+
+```
+forge script script/DeploySimpleStorage.s.sol --rpc-url http://127.0.0.1:8545 --account defaultKey --sender 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266 --broadcast -vvvv 
+```
+
+0: contract SimpleStorage 0x5FbDB2315678afecb367f032d93F642f64180aa3
+
+---
+
+# How to interact with a (non-view) function in your smart contract from the command line:
+
+Note: The value after send is the public address of the contract:
+After that is the function name and the signature of that function in your contract,
+that you are trying to access.
+
+The signature is simply the inputs that the function in the contract requires.
+
+E.g. In the SimpleStorage contract, there is a function called "store"
+In order to work, this function needs to be given a _favoriteNumber value,
+which is a unit256
+
+So "store(uint256)" 123 
+would be the same as store(123) in traditional coding.
+
+```solidity
+
+    function store(uint256 _favoriteNumber) public {
+        myFavoriteNumber = _favoriteNumber;
+    }
+```
+
+
+```
+cast send 0x5FbDB2315678afecb367f032d93F642f64180aa3 "store(uint256)" 123 rpc-url $RPC_URL --account defaultKey
+```
+
+This is the output you'll get after running that command:
+```
+❯ cast send 0x5FbDB2315678afecb367f032d93F
+642f64180aa3 "store(uint256)" 123 rpc-url 
+$RPC_URL --account defaultKey
+
+Enter keystore password:
+
+blockHash               0xecf7bb75b677f791
+1c3ba3c172f977d83c70303b6245efb355ef386e31
+f2f1be
+blockNumber             2
+contractAddress         
+cumulativeGasUsed       43538
+effectiveGasPrice       3877975734
+from                    0xf39Fd6e51aad88F6
+F4ce6aB8827279cffFb92266
+gasUsed                 43538
+logs                    []
+logsBloom               0x0000000000000000
+000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000
+000000000000000000000000000000000000000000
+0000000000000000000000000000000000
+root                    
+status                  1
+transactionHash         0x4219a2acd5c5ee74
+912e5b1966b41183542a00b411078c79878c3703ce
+3a9557
+transactionIndex        0
+type                    2
+to                      0x5FbDB2315678afec
+b367f032d93F642f64180aa3
+depositNonce             null
+
+```
+
+---
+
+# How interact with view functions:
+
+E.g. I want to interact with the function called retrieve in my contract.
+
+```solidity
+
+    function retrieve() public view returns (uint256) {
+        return myFavoriteNumber;
+    }
+```
+
+This is the command that you would use:
+Note that for a view function you don't need the rpc-url or your private key,
+because you are simply reading a value from the contract.
+
+You are not modifying the values stored in the contract in any way.
+```
+cast call 0x5FbDB2315678afecb367f032d93F642f64180aa3 "retrieve()" 
+```
+
+When you do this you will get the hex value back:
+
+0x000000000000000000000000000000000000000000000000000000000000007b
+
+To convert the hex to decimal:
+```
+cast --to-base 0x000000000000000000000000000000000000000000000000000000000000007b dec
+```
+
+123
+
+As you can see, it returned the value stored in the contract
+
+---
+
+
+cast --to-base 0x0000000000000000000000000000000000000000000000000000000000000309 dec

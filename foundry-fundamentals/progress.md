@@ -19,3 +19,10 @@
 - Lesson 15: What is a transaction
 - Lesson 16: Important: private key safety pt.2
 - Lesson 17: Never Use A Env File
+
+# Lesson 18 is not done because the "npx thirdweb deploy" is not working.
+# I will try again some other time.
+
+- Lesson 19: Interact with a smart contract using the CLI
+
+
