@@ -9,8 +9,13 @@ such as retaining the original copyright notice and disclaimer.
 
 */
 
-// This line of code tells solidity to use version 0.8.19 of the compiler
+// This line of code tells solidity to use version 0.8.18 of the compiler,
+// or anything greater than that
 pragma solidity ^0.8.18;
+
+// NOTE: You can also have Solidity versions in a range
+// pragma solidity >=0.8.18 <0.9.0;   
+
 
 // The name of the contract is called SimpleStorage
 // Everything inside the curly braces is the contract
@@ -33,11 +38,24 @@ contract SimpleStorage {
         string name;
     }
 
+    //-------------------------------------------------------------------------
+
+    // NOTE: How to create a variable that follows the struct Person template
+        
+    // Person public dezly = Person({favoriteNumber: 7, name: "Dezly"});
+
+    //-------------------------------------------------------------------------
+
     // listofPeople is an array that contains a list of variables.
     // The variable type of each of those variables is "Person"
     // public means that this variable is publically accessible
+    // This is a dynamic array
     Person[] public listOfPeople;
-    
+   
+    // NOTE: Static arrays
+    // Person[3] public listOfPeople;
+    // This would be mean a max size of 3 Persons (aka 3 variables)
+
     // This is a mapping called nameToFavoriteNumber,
     // This mapping takes in a string, and returns the matching number
     // E.g. You enter the name of a person,

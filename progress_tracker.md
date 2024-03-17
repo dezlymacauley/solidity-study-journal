@@ -4,9 +4,9 @@ Remember: "6 figure salary. Luxury and Solitude"
 
 ---
 
-## Course 1 - Blockchain Basics
+## Course 1 - Blockchain Basics (Course Completed)
 
-### Section 1: Blockchain Basics
+### Section 1: Blockchain Basics (Section Completed)
 - Lesson 1: Welcome to Updraft!
 - Lesson 2: Lesson 2: What is a blockchain?
 - Lesson 3: The purpose of smart contracts
@@ -21,17 +21,33 @@ Remember: "6 figure salary. Luxury and Solitude"
 
 ---
 
-## Course 2 - Solidity Fundamentals
+## Course 2 - Solidity Fundamentals 
 
-### Section 1: Simple Storage
+### Section 1: Simple Storage (Section Completed)
 - Lesson 1: Introduction
 - Lesson 2: Setting up your first contract
 - Lesson 3: Basic variable types
 - Lesson 4: Functions
 - Lesson 5: Arrays and structs
 - Lesson 6: Errors and warnings
+- Lesson 7: Memory storage and calldata
+- Lesson 8: Mappings
+- Lesson 9: Deploying your first contract
+- Lesson 10: Section recap
 
-### Section 4: AI Prompting
+### Section 2: Storage factory (Completed)
+- Lesson 1: Storage factory introduction
+- Lesson 2: Setting the project
+- Lesson 3: Deploying a contract from a contract 
+- Lesson 4: Solidity imports
+- Lesson 5: Use AI to help pt.1
+- Lesson 6: Interacting with contracts ABI
+- Lesson 7: Inheritance in Solidity
+- Lesson 8: Sections summary and recap
+
+### Section 3: Fund Me 
+
+### Section 4: AI Prompting (Section Completed)
 - Lesson 1: AI and forums
 - Lesson 2: Setting up Github
 - Lesson 3: Formatting a question
