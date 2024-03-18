@@ -81,6 +81,11 @@ Remember: "6 figure salary. Luxury and Solitude"
 # I will try again some other time.
 
 - Lesson 19: Interact with a smart contract using the CLI
+- Lesson 20: Deploying a smart contract on testnet (Sepolia)
+- Lesson 21: Verify a smart contract on Etherscan
+- Lesson 22: Cleaning up the project
+- Lesson 23: Introduction to Alchemy
+- Lesson 24: Wrap up, congratulations!
 
 ---
 
