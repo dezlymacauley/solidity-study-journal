@@ -46,6 +46,25 @@ Remember: "6 figure salary. Luxury and Solitude"
 - Lesson 8: Sections summary and recap
 
 ### Section 3: Fund Me 
+- Lesson 1: Fund me introduction
+- Lesson 2: Project setup
+- Lesson 3: Sending ETH through a function
+- Lesson 4: Solidity reverts
+- Lesson 5: Intro to oracles - getting real world price data
+- Lesson 6: Mid section recap
+- Lesson 7: Solidity interfaces
+- Lesson 8: Use AI to help pt.2
+- Lesson 9: Importing libaries from NPM and Github
+- Lesson 10: Getting real world price data from Chainlink
+- Lesson 11: Solidity math
+- Lesson 12: Msg sender explained
+- Lesson 13: Quick section recap
+- Lesson 14: Creating your own libraries
+- Lesson 15: Using Safemath
+- Lesson 16: Solidity for Loop
+- Lesson 17: Resetting an Array
+- Lesson 18: Sending ETH from a contract
+- Lesson 19: Smart contract constructor
 
 ### Section 4: AI Prompting (Section Completed)
 - Lesson 1: AI and forums
@@ -86,6 +105,9 @@ Remember: "6 figure salary. Luxury and Solitude"
 - Lesson 22: Cleaning up the project
 - Lesson 23: Introduction to Alchemy
 - Lesson 24: Wrap up, congratulations!
+
+### Section 2: Foundry Simple Storage
+- Lesson 1: Fund Me project setup
 
 ---
 
